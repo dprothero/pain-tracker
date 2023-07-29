@@ -3,14 +3,14 @@ require("dotenv").config();
 
 const painLogSql = `CREATE TABLE IF NOT EXISTS "pain_log" (
   "id" SERIAL,
-  "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  "created_at" TIMESTAMP WITHOUT TIME ZONE DEFAULT (CURRENT_TIMESTAMP AT TIME ZONE 'America/Los_Angeles'),
   "severity" INTEGER NOT NULL,
   PRIMARY KEY ("id")
 );`;
 
 const painNotesSql = `CREATE TABLE IF NOT EXISTS "pain_notes" (
   "id" SERIAL,
-  "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  "created_at" TIMESTAMP WITHOUT TIME ZONE DEFAULT (CURRENT_TIMESTAMP AT TIME ZONE 'America/Los_Angeles'),
   "note" TEXT NOT NULL,
   PRIMARY KEY ("id")
 );`;
