@@ -1,6 +1,6 @@
 {
   "name": "pain-tracker",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -8,12 +8,12 @@
     "deploy": "twilio-run deploy"
   },
   "dependencies": {
-    "airtable": "^0.10.1"
+    "pg": "^8.11.1"
   },
   "devDependencies": {
-    "twilio-run": "^2.6.0"
+    "twilio-run": "^3.5.3"
   },
   "engines": {
-    "node": "10"
+    "node": "16"
   }
 }

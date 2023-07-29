@@ -1,0 +1,15 @@
+name: Send Reminder
+
+on:
+  schedule:
+    - cron: "05 19 * * *"
+
+jobs:
+  send-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Reminder SMS
+        env:
+          FUNCTION_URL: ${{ secrets.FUNCTION_URL }}
+        run: |
+          curl --request GET --url $FUNCTION_URL
