@@ -2,7 +2,7 @@ name: Send Reminder
 
 on:
   schedule:
-    - cron: "30 2 * * *"
+    - cron: "33 2 * * *"
 
 jobs:
   send-reminder:
